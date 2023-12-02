@@ -5,7 +5,7 @@ output "backend_s3_bucket_id" {
   value = module.project_backend.tfstates_bucket_id
 }
 
-output "bakcend_dynamodb_table_name" {
+output "backend_dynamodb_table_name" {
   description = <<-EOS
                 Represents the dynamodb table name used for locking the terraform states bucket.
                 EOS
