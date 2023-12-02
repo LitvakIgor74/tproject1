@@ -1,0 +1,5 @@
+.terraform
+*.tfstate
+*.tfstate.backup
+
+!global/s3/terraform.tfstate
