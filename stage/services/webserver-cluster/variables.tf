@@ -33,3 +33,8 @@ variable "instance_type" {
   description = "value"
   type = string
 }
+
+variable "asg_custom_tags" {
+  description = "value"
+  type = map(string)
+}

@@ -1,4 +1,4 @@
-unique_prefix = "tci"
+unique_prefix = "stage"
 project_name = "tproject1"
 db_instance_class = "db.t2.micro"
 db_allocated_storage = 10

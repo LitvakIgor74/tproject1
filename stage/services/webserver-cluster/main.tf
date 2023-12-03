@@ -32,7 +32,7 @@ data "terraform_remote_state" "db" {
 
 # ----------------------------------------------------------------------------------- webserver-cluster
 module "webserver_cluster" {
-  source = "github.com/LitvakIgor74/tfm-service-webserver-cluster?ref=v0.0.1"
+  source = "github.com/LitvakIgor74/tfm-service-webserver-cluster?ref=v0.0.2"
   unique_prefix = var.unique_prefix
   project_name = var.project_name
   instance_server_port = var.instance_server_port
@@ -41,6 +41,7 @@ module "webserver_cluster" {
   instance_type = var.instance_type
   db_port = data.terraform_remote_state.db.outputs.db_port
   db_address = data.terraform_remote_state.db.outputs.db_address
+  custom_tags = var.asg_custom_tags
 }
 
 resource "aws_autoscaling_schedule" "scale_up" {
